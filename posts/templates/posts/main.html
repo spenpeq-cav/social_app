@@ -9,4 +9,17 @@ Home
     {{Hello}}
 </div>
 
+<div id='posts'>
+    {% for obj in qs %}
+        {{obj.body}} <br>
+    {% endfor %}
+</div>
+<br>
+<div id='posts2'>
+</div>
+
+<div id="spinner-box">
+    <div class="spinner-border" role="status"></div>
+</div>
+
 {% endblock content %}
