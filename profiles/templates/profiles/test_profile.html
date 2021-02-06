@@ -5,5 +5,13 @@ Test Profile
 {% endblock title %}
 
 {% block content %}
-{{profile}}
+<p><b>My posts</b>: {{profile.get_my_posts}}</p>
+<p><b>Number of posts</b>: {{profile.num_posts}}</p>
+<p><b>Following profiles</b>: {{profile.get_following}}</p>
+<p><b>Following profiles list</b>: {{profile.get_following_users}}</p>
+<p><b>My posts + posts of following users</b>: {{profile.get_my_and_following_posts}}</p>
+<p><b>Recommended following</b>: {{profile.get_proposals_for_following}}</p>
+<p><b>Following</b>: {{profile.following_count}}</p>
+<p><b>Followers</b>: {{profile.follower_count}}</p>
+<p><b>My Followers</b>: {{profile.get_followers}}</p>
 {% endblock content %}
